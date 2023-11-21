@@ -18,9 +18,9 @@
     color: white;
 }
 
-.welcome .box {
+.welcome .div {
     background: rgba( 25, 26, 27, 0.85 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    div-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 5px );
     -webkit-backdrop-filter: blur( 5px );
     width: 100vw;
@@ -28,31 +28,57 @@
     display: flex;
 }
 
-.welcome .box .center {
+.welcome .div .center {
     margin: auto;
     height: 400px;
     width: 400px;
     position: relative;
 }
 
-.welcome .box .center .text {
+.welcome .div .center .text {
     width: 400px;
     height: 100px;
     display: flex;
 }
 
-.welcome .box .center .text h1 {
+.welcome .div .center .bl {
+    height: 100px;
+    width: 400px;
+    display: flex;
+}
+
+.welcome .div .center .bl  .language {
+    width: min-content;
+    height: 17px;
+    display: flex;
+    margin: auto;
+    color: #3b82f6;
+    font-size: 17px;
+    transition: all 0.3s;
+}
+
+.welcome .div .center .bl  .language:hover {
+    color: #2563eb;
+}
+
+.welcome .div .center .bl  .language .text {
+    margin-left: 10px;
+    width: max-content;
+    height: 17px;
+}
+
+.welcome .div .center .text h1 {
     margin: auto;
 }
 
-.welcome .box .center .down {
+.welcome .div .center .down {
     position: absolute;
     bottom: 0;
     width: 400px;
     display: flex;
 }
 
-.welcome .box .center .down button {
+.welcome .div .center .down button {
     margin: auto;
 }
 
