@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.options {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("/src/default.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.options .darker {
+    background: rgba( 25, 26, 27, 0.85 );
+    div-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.options .darker .content {
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+.options .darker .content h1 {
+    font-size: 25px;
+}

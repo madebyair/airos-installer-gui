@@ -5,9 +5,13 @@ import { faEarthEurope } from "@fortawesome/free-solid-svg-icons"
 import LanguageSelect from "./welcome/LanguageSelect"
 import i18next from "i18next"
 import { useTranslation } from "react-i18next"
+import OptionsMenu from "./options/OptionsMenu"
+import { useAtomState } from "@zedux/react"
+import { componentState } from "./state/componentState"
 
 export default function Welcome() {
     const [language, setLanguage] = useState(false)
+    const [, setComponent] = useAtomState(componentState)
     const { t } = useTranslation()
 
     function sumbit (lang: string) {
@@ -37,7 +41,7 @@ export default function Welcome() {
                 </div>
               </div>
               <div className="down">
-                <button className="button-normal">{t("Continue")}</button>
+                <button className="button-normal" onClick={() => setComponent(<OptionsMenu />)}>{t("Continue")}</button>
               </div>
             </div>
         </div>
