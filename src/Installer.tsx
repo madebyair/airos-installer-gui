@@ -1,7 +1,8 @@
-import Welcome from "./Welcome"
+import { useAtomState } from "@zedux/react"
+import { componentState } from "./state/componentState"
 
 export default function Installer() {
-    return (
-        <Welcome />
-    )
+    const [component] = useAtomState(componentState)
+    
+    return component
 }
