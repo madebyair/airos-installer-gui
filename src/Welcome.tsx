@@ -3,12 +3,16 @@ import "./welcome.css"
 import { useState } from "react"
 import { faEarthEurope } from "@fortawesome/free-solid-svg-icons"
 import LanguageSelect from "./welcome/LanguageSelect"
+import i18next from "i18next"
+import { useTranslation } from "react-i18next"
 
 export default function Welcome() {
     const [language, setLanguage] = useState(false)
+    const { t } = useTranslation()
 
-    function sumbit (/*lang*/) {
+    function sumbit (lang: string) {
       setLanguage(false)
+      i18next.changeLanguage(lang)
     }
 
     return (
@@ -20,7 +24,7 @@ export default function Welcome() {
         <div className="div">
             <div className="center">
               <div className="text">
-                <h1>Welcome</h1>
+                <h1>{t("Welcome")}</h1>
               </div>
               <div className="bl">
                 <div className="language" onClick={() => setLanguage(true)}>
@@ -28,12 +32,12 @@ export default function Welcome() {
                     <FontAwesomeIcon icon={faEarthEurope} />
                   </div>
                   <div className="text">
-                      <span>Language</span>
+                      <span>{t("Language")}</span>
                   </div>
                 </div>
               </div>
               <div className="down">
-                <button className="button-normal">Continue</button>
+                <button className="button-normal">{t("Continue")}</button>
               </div>
             </div>
         </div>
