@@ -1,7 +1,8 @@
 import React from "react"
+import Welcome from "./Welcome"
 
 export default function Installer() {
     return (
-        <h1>Here will be installer</h1>
+        <Welcome />
     )
 }
