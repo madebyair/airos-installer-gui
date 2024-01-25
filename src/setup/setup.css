@@ -1,0 +1,21 @@
+.setup {
+    width: 100vw;
+    height: 100vh;
+    background: url("/src/assets/background.webp") center;
+    background-size: cover;
+    display: flex;
+}
+
+
+.setup .darker {
+    background: rgba( 25, 26, 27, 0.85 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.setup .darker .center {
+    margin: auto;
+}

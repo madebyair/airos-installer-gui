@@ -1,0 +1,73 @@
+.welcome {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+.welcome .text {
+    width: 400px;
+    height: 100px;
+    display: flex;
+}
+
+.welcome .bl {
+    height: 100px;
+    width: 400px;
+    display: flex;
+}
+
+.welcome .bl  .language {
+    width: min-content;
+    height: 17px;
+    display: flex;
+    margin: auto;
+    color: #3b82f6;
+    font-size: 17px;
+    transition: all 0.3s;
+}
+
+.welcome .bl  .language:hover {
+    color: #2563eb;
+}
+
+.welcome .bl  .language .text {
+    margin-left: 10px;
+    width: max-content;
+    height: 17px;
+}
+
+.welcome .text h1 {
+    margin: auto;
+}
+
+.welcome .down {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    display: flex;
+}
+
+.welcome .down button {
+    margin: auto;
+}
+
+.button-normal {
+    color: white;
+    background-color: #1e293b;
+    transition: background-color 0.3s ease;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+.button-normal:hover {
+    background-color: #111827; 
+}
+  
+.button-normal:focus {
+    outline: none;
+}
