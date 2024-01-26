@@ -2,5 +2,9 @@
     "Welcome": "Welcome",
     "Language": "Language",
     "Continue": "Continue",
-    "Just one secound": "Just one secound"
+    "Just one secound": "Just one secound",
+    "Installation options": "Installation options",
+    "Install on hard disk {{name}} {{number}} ({{size}} GB)": "Install on hard disk {{name}} {{number}} ({{size}} GB)",
+    "Install on NVME disk {{name}} ({{size}} GB)": "Install on NVME disk {{name}} ({{size}} GB)",
+    "Install on virtual machine disk 1": "Install on virtual machine disk 1"
 }   
