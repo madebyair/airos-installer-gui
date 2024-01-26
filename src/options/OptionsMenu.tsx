@@ -48,7 +48,7 @@ export default function OptionsMenu() {
                     <div className="disk" key={option.location}>
                         <input
                             type="radio"
-                            name="diskOptions
+                            name="diskOptions"
                             checked={selected === option.location}
                             onChange={() => setSelectedName(option.name) || setSelected(option.location)}
                         />
