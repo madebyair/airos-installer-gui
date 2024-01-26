@@ -6,5 +6,9 @@
     "Installation options": "Installation options",
     "Install on hard disk {{name}} {{number}} ({{size}} GB)": "Install on hard disk {{name}} {{number}} ({{size}} GB)",
     "Install on NVME disk {{name}} ({{size}} GB)": "Install on NVME disk {{name}} ({{size}} GB)",
-    "Install on virtual machine disk 1": "Install on virtual machine disk 1"
+    "Install on virtual machine disk 1": "Install on virtual machine disk 1",
+    "Delete all data, and install airos": "Delete all data, and install airos",
+    "To install airos, you must delete all data from {{disk}}. If another operating system is currently installed, all data will be deleted.": "To install airos, you must delete all data from {{disk}}. If another operating system is currently installed, all data will be deleted.",
+    "If you want to transfer data from Windows, close this installer and use the Switch to airos application in Windows": "If you want to transfer data from Windows, close this installer and use the Switch to airos application in Windows",
+    "Delete everything, and install airos": "Delete everything, and install airos"
 }   

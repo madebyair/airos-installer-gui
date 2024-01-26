@@ -21,6 +21,7 @@ export default function optionCreator(disks: DiskType[]) {
             result.push({
                 "human_readable": i18n.t("Install on virtual machine disk 1"),
                 "location": disk.location,
+                "name": "Virtual disk"
             });
         }
 
@@ -30,6 +31,7 @@ export default function optionCreator(disks: DiskType[]) {
             result.push({
                 "human_readable": i18n.t("Install on hard disk {{name}} {{number}} ({{size}} GB)", { name: disk.name, number: letterToNumber(letter), size: mbToGb(disk.size).toString().slice(0, -1)}),
                 "location": disk.location,
+                "name": disk.name + " (" + mbToGb(disk.size).toString().slice(0, -1) + " GB)"
             });
         }
 
@@ -38,6 +40,7 @@ export default function optionCreator(disks: DiskType[]) {
             result.push({
                 "human_readable": i18n.t("Install on NVME disk {{name}} ({{size}} GB)", { name: disk.name, size: mbToGb(disk.size).toString().slice(0, -1)}),
                 "location": disk.location,
+                "name": disk.name + " (" + mbToGb(disk.size).toString().slice(0, -1) + " GB)"
             });
         }
     });
