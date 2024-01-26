@@ -11,3 +11,7 @@ export function fadeIn(ids: Array<string>, fun: (() => void) | undefined) : void
         }
     }, 350)
 }
+
+export function gbToMb(gigabytes: number) : number {
+    return gigabytes * 1024;
+}

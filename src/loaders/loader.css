@@ -1,0 +1,16 @@
+.loading {
+    height: 400px;
+    width: 400px;
+}
+
+.loading .box {
+    display: flex;
+    height: 392px;
+    width: 400px;
+}
+
+.loading .box span {
+    margin: auto;
+    font-weight: bold;
+    font-size: 25px;
+}

@@ -14,7 +14,14 @@
       "all": false,
       "shell": {
         "all": false,
-        "open": true
+        "execute": true,
+        "scope": [
+          {
+            "name": "lsblk",
+            "cmd": "lsblk",
+            "args": ["-o", "NAME,SIZE,RM,MODEL"]
+          }
+        ]
       }
     },
     "bundle": {

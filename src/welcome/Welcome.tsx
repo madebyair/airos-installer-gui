@@ -11,6 +11,7 @@ import OptionsMenu from "../options/OptionsMenu.tsx"
 import { useAtomState } from "@zedux/react"
 import { componentState } from "../state/componentState.tsx"
 import { fadeIn } from "../helpers.ts";
+import DiskLoader from "../loaders/DiskLoader.tsx";
 
 export default function Welcome() {
     const [language, setLanguage] = useState(false)
@@ -42,7 +43,7 @@ export default function Welcome() {
                 </div>
               </div>
               <div className="down fadein" id="button">
-                <button className="button-normal" onClick={() =>  fadeIn(["text", "content", "button"], () => { setComponent(<OptionsMenu />) })}>{t("Continue")}</button>
+                <button className="button-normal" onClick={() =>  fadeIn(["text", "content", "button"], () => { setComponent(<DiskLoader />) })}>{t("Continue")}</button>
               </div>
             </div>
     )
