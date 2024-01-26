@@ -13,7 +13,7 @@ export default function DiskLoader() {
     const [, setAvailableDisks] = useAtomState(availableDisksState)
 
     useEffect(() => {
-        const disks: DiskType[][] = []
+        const disks: DiskType[] = []
         async function executeCmd() {
             const command = new Command('lsblk');
 
@@ -51,7 +51,7 @@ export default function DiskLoader() {
                 const removable = Boolean(parseInt(parts[2]))
                 const name = parts.slice(3).join(' ')
 
-                disks.push([{ location: location, name: name, removable: removable, size: gbToMb(size) }])
+                disks.push({ location: location, name: name, removable: removable, size: gbToMb(size) })
             })
 
             await command.spawn()
