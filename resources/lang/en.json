@@ -10,5 +10,8 @@
     "Delete all data, and install airos": "Delete all data, and install airos",
     "To install airos, you must delete all data from {{disk}}. If another operating system is currently installed, all data will be deleted.": "To install airos, you must delete all data from {{disk}}. If another operating system is currently installed, all data will be deleted.",
     "If you want to transfer data from Windows, close this installer and use the Switch to airos application in Windows": "If you want to transfer data from Windows, close this installer and use the Switch to airos application in Windows",
-    "Delete everything, and install airos": "Delete everything, and install airos"
+    "Delete everything, and install airos": "Delete everything, and install airos",
+    "Installing airos": "Installing airos",
+    "Grab a coffee and chill out :)": "Grab a coffee and chill out :)",
+    "This may take a few minutes.": "This may take a few minutes."
 }   

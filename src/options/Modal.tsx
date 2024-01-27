@@ -7,7 +7,7 @@ export default function Modal({name, cont} : {name: string, cont: () => void}) {
     const { t } = useTranslation()
 
     return (
-        <div className="modal">
+        <div className="modal fadein" id="modal">
             <header>
                 <h1>{t("Delete all data, and install airos")}</h1>
             </header>

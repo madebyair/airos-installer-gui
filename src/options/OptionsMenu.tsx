@@ -8,6 +8,9 @@ import {availableDisksState, selectedDiskState} from "../state/diskState.ts";
 import OptionType from "../interface/OptionType.ts";
 import {useTranslation} from "react-i18next";
 import Modal from "./Modal.tsx";
+import {componentState} from "../state/componentState.tsx";
+import Installing from "../installing/Installing.tsx";
+import {fadeIn} from "../helpers.ts";
 
 export default function OptionsMenu() {
     const [disks] = useAtomState(availableDisksState);
@@ -16,6 +19,7 @@ export default function OptionsMenu() {
     const [selectedName, setSelectedName] = useState("");
     const [modal, setModal] = useState(false)
     const [, setSelectedDisk] = useAtomState(selectedDiskState)
+    const [, setComponent] = useAtomState(componentState)
 
     useEffect(() => {
         const result = optionCreator(disks);
@@ -27,12 +31,16 @@ export default function OptionsMenu() {
 
     const { t } = useTranslation()
 
-    // @ts-ignore
     return (
-        <div className="options fadein">
+        <div className="options fadein" id="options">
             {modal &&
                 <>
-                    <Modal name={selectedName} cont={() => setSelectedDisk(selected)} />
+                    <Modal name={selectedName} cont={() => {
+                        fadeIn(["options"], () => {
+                            setSelectedDisk(selected)
+                            setComponent(<Installing />)
+                        })
+                    }}/>
                     <div className="overlay"></div>
                 </>
             }
@@ -50,14 +58,18 @@ export default function OptionsMenu() {
                             type="radio"
                             name="diskOptions"
                             checked={selected === option.location}
-                            onChange={() => setSelectedName(option.name) || setSelected(option.location)}
+                            onChange={() => {
+                                setSelectedName(option.name)
+                                setSelected(option.location)
+                            }
+                            }
                         />
                         <span>{option.human_readable}</span>
                     </div>
                 ))}
             </div>
             {selected !== "" &&
-                <div className="button">
+                <div className="button fadein">
                     <button className="button-normal" onClick={() => setModal(true)}>{t("Continue")}</button>
                 </div>
             }
