@@ -3,9 +3,7 @@
 import React from "react";
 import "./setup.css"
 
-// eslint-disable-next-line react/prop-types,@typescript-eslint/ban-ts-comment
-// @ts-expect-error
-const SetupContainer = ({children}) => {
+const SetupContainer = ({children} : { children: JSX.Element }) => {
     return (
         <div className="setup">
             <div className="darker">

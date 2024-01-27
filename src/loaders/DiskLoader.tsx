@@ -1,5 +1,7 @@
 import LoadingAnimation from "./animation/LoadingAnimation.tsx";
-import {useEffect} from "react";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import React, {useEffect} from "react";
 import {fadeIn, gbToMb} from "../helpers.ts";
 import {Command} from "@tauri-apps/api/shell";
 import DiskType from "../interface/DiskType.ts";
@@ -61,11 +63,13 @@ export default function DiskLoader() {
 
         setTimeout(() => {
             console.log("lsblk detected these disks ", disks)
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             setAvailableDisks(disks)
             fadeIn(["loading"], () => { setComponent(<OptionsMenu />) })
         }, 800)
         
-    }, [])
+    }, [setAvailableDisks, setComponent])
 
     return <LoadingAnimation />
 }

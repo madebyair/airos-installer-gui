@@ -7,7 +7,6 @@ import { faEarthEurope } from "@fortawesome/free-solid-svg-icons"
 import LanguageSelect from "./LanguageSelect.tsx"
 import i18next from "i18next"
 import { useTranslation } from "react-i18next"
-import OptionsMenu from "../options/OptionsMenu.tsx"
 import { useAtomState } from "@zedux/react"
 import { componentState } from "../state/componentState.tsx"
 import { fadeIn } from "../helpers.ts";
