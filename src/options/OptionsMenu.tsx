@@ -54,16 +54,21 @@ export default function OptionsMenu() {
             <div className="disks">
                 {options.map((option: OptionType) => (
                     <div className="disk" key={option.location}>
-                        <input
-                            type="radio"
-                            name="diskOptions"
-                            checked={selected === option.location}
-                            onChange={() => {
-                                setSelectedName(option.name)
-                                setSelected(option.location)
-                            }
-                            }
-                        />
+                        {option.tooSmall &&
+                            <span className="red">{t("Disk is too small")}</span>
+                        }
+                        {!option.tooSmall &&
+                            <input
+                                type="radio"
+                                name="diskOptions"
+                                checked={selected === option.location}
+                                onChange={() => {
+                                    setSelectedName(option.name)
+                                    setSelected(option.location)
+                                }
+                                }
+                            />
+                        }
                         <span>{option.human_readable}</span>
                     </div>
                 ))}

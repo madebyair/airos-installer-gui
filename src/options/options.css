@@ -33,6 +33,10 @@
     margin-left: 8px;
 }
 
+.options .disks .disk .red {
+    color: red;
+}
+
 .options .button {
     position: absolute;
     bottom: 0;
